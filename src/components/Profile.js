@@ -126,9 +126,8 @@ const { user } = useAuth0();
     },
   };
 
-  // Replace with your actual Firebase project configuration
   const firebaseConfig = {
-    
+    apiKey: process.env.apiKey,
     authDomain: "hacks-df68f.firebaseapp.com",
     projectId: "hacks-df68f",
     storageBucket: "hacks-df68f.appspot.com",
