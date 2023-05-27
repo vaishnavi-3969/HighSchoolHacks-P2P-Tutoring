@@ -104,3 +104,25 @@
   margin-right: 5px;
 }
 
+.login-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  color: #fff;
+}
+
+.login-icon {
+  margin-right: 5px;
+  font-size: 20px;
+}
+ 
