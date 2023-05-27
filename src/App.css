@@ -99,3 +99,8 @@
 .navbar-links li:hover:before {
   transform: rotateX(0deg);
 }
+
+.nav-icon {
+  margin-right: 5px;
+}
+
