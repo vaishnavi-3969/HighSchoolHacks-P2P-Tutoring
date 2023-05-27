@@ -14,7 +14,7 @@ const Home = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Volunteers", "Tutors", "Tutees"];
+  const toRotate = ["Peer Tutoring", "Tutors", "Tutees"];
   const period = 2000;
   const variants = {
     hover: {
@@ -76,7 +76,8 @@ const Home = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h1>{`Hi! We are `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Volunteers", "Tutors", "Tutees" ]'><span className="wrap">{text}</span></span></h1>
+                  <h1>{`Hi! We are `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Peer Tutoring", "Tutors", "Tutees" ]'>
+                    <span className="wrap">{text}</span></span></h1>
                   <p>Earn School Credits for becoming a tutor</p>
                   <div className="button-group">
                     <Link to="/" element={<Home />}>

@@ -9,7 +9,7 @@ import { Button } from 'react-bootstrap';
 export default function NavBar() {
     const { loginWithRedirect } = useAuth0();
     const { logout } = useAuth0();
-    const { user, isAuthenticated, isLoading } = useAuth0();
+    const { user, isAuthenticated } = useAuth0();
 
     return (
         <nav className="navbar">
@@ -41,17 +41,18 @@ export default function NavBar() {
                         isAuthenticated &&
                         <p>
                             <li>
-                            <Link to="/profile">
-                                <FaUserCircle className="nav-icon" />
-                                {user.name}
-                            </Link>
-                        </li>
+                                <Link to="/profile">
+                                    <FaUserCircle className="nav-icon" />
+                                    {user.name}
+                                </Link>
+                            </li>
                         </p>
                     }
                 </li>
+                
                 {
                     isAuthenticated ? (<>
-                        
+                    
                         <li>
                             <Button
                                 className="login-button animate__animated animate__fadeIn"
