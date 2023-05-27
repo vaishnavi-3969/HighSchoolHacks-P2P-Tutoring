@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.banner {
+  margin-top: 0;
+  padding: 50px 40px 100px 40px;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.banner p {
+  color: #666;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+.banner .button-group {
+  display: flex;
+  align-items: center;
+}
+
+.banner .button-group .join-button {
+  margin-right: 10px;
+}
+
+.banner img {
+  animation: updown 3s linear infinite;
+  float: right;
+  margin-left: 20px;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.txt-rotate>.wrap {
+  border-right: 0.08em solid #666;
+}
+
+.join-button {
+  background-color: #F08080;
+  border-radius: 50px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.join-button:hover {
+  background-color: #FFDAB9;
+  transform: translateY(-5px);
+  color: black;
+}
+
+.join-button:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px #F08080;
+}
+
+.join-button:active {
+  transform: translateY(2px);
+}
+
+.join-button svg {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .join-button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
