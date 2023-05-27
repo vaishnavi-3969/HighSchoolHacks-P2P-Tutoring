@@ -61,56 +61,55 @@ const Home = () => {
   }
 
   return (
-  <section className="banner" id="home">
-  <Container>
-    <Row className="align-items-center">
-      <Col xs={12} md={6} xl={5}>
-        <TrackVisibility>
-          {({ isVisible }) =>
-            <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-              <img src={headerImage} alt="Header Img" />
-            </div>}
-        </TrackVisibility>
-      </Col>
-      <Col xs={12} md={6} xl={7}>
-        <TrackVisibility>
-          {({ isVisible }) =>
-            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-              <h1>{`Hi! We are `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Volunteers", "Tutors", "Tutees" ]'><span className="wrap">{text}</span></span></h1>
-              <p>Earn School Credits for becoming a tutor</p>
-              <div className="button-group">
-                <Link to="/" element={<Home/>}>
-                  <motion.button
-                    className="join-button"
-                    whileHover="hover"
-                    whileTap="tap"
-                    variants={variants}
-                  >
-                    Become a Tutor <ArrowRightCircle size={25} />
-                  </motion.button>
-                </Link>
-                <Link to="/" element={<Home/>}>
-                  <motion.button
-                    className="join-button"
-                    whileHover="hover"
-                    whileTap="tap"
-                    variants={variants}
-                  >
-                    Become a Tutee <ArrowRightCircle size={25} />
-                  </motion.button>
-                </Link>
-              </div>
-              <p>
-              High school students often face challenges in understanding certain subjects or topics. To address this, we aim to develop a peer tutoring network that connects high school students who require academic assistance with their peers who excel in specific subjects. The network will provide a platform for students to schedule virtual tutoring sessions and seek guidance from knowledgeable peers.
-
-The system should allow students to register as tutors or tutees. Tutors can specify their areas of expertise, availability, and set tutoring rates if desired. Tutees can search for tutors based on subjects, view tutor profiles with ratings and reviews, and book tutoring sessions that fit their schedules.
-              </p>
-            </div>}
-        </TrackVisibility>
-      </Col>
-    </Row>
-  </Container>
-</section>
+    <section className="banner" id="home">
+      <Container>
+        <Row className="align-items-center">
+          <Col xs={12} md={6} xl={5}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                  <img src={headerImage} alt="Header Img" />
+                </div>}
+            </TrackVisibility>
+          </Col>
+          <Col xs={12} md={6} xl={7}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <h1>{`Hi! We are `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Volunteers", "Tutors", "Tutees" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>Earn School Credits for becoming a tutor</p>
+                  <div className="button-group">
+                    <Link to="/" element={<Home />}>
+                      <motion.button
+                        className="join-button"
+                        whileHover="hover"
+                        whileTap="tap"
+                        variants={variants}
+                      >
+                        Become a Tutor <ArrowRightCircle size={25} />
+                      </motion.button>
+                    </Link>
+                    <Link to="/" element={<Home />}>
+                      <motion.button
+                        className="join-button"
+                        whileHover="hover"
+                        whileTap="tap"
+                        variants={variants}
+                      >
+                        Become a Tutee <ArrowRightCircle size={25} />
+                      </motion.button>
+                    </Link>
+                  </div>
+                  <p>
+                    High school students often face challenges in understanding certain subjects or topics. To address this, we aim to develop a peer tutoring network that connects high school students who require academic assistance with their peers who excel in specific subjects. The network will provide a platform for students to schedule virtual tutoring sessions and seek guidance from knowledgeable peers.
+                    The system should allow students to register as tutors or tutees. Tutors can specify their areas of expertise, availability, and set tutoring rates if desired. Tutees can search for tutors based on subjects, view tutor profiles with ratings and reviews, and book tutoring sessions that fit their schedules.
+                  </p>
+                </div>}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
+    </section>
 
 
   )
