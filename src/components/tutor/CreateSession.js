@@ -15,10 +15,8 @@ const firebaseConfig = {
   measurementId: "G-24BW9CM14D"
 };
 
- ;
-
 const CreateSession = () => {
-  const { user } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
@@ -32,11 +30,11 @@ const CreateSession = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app)
+    const db = getDatabase(app);
     const profileRef = ref(db, 'session');
-    const session_data = {
-      name: user.name,
-      email: user.email,
+    const sessionData = {
+      name: user ? user.name : '',
+      email: user ? user.email : '',
       date,
       time,
       subject,
@@ -44,8 +42,8 @@ const CreateSession = () => {
       recommendedGrade,
       additionalInfo,
       resourceLinks,
-    }
-    push(profileRef, session_data)
+    };
+    push(profileRef, sessionData)
       .then(() => {
         alert("Session Created Successfully");
 
@@ -79,6 +77,9 @@ const CreateSession = () => {
     updatedLinks.splice(index, 1);
     setResourceLinks(updatedLinks);
   };
+  if (!isAuthenticated) {
+    return <div>Please log in to create a session.</div>;
+  }
 
   return (
     <div>

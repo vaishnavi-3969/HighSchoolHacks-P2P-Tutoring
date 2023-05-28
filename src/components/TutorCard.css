@@ -1,0 +1,48 @@
+.tutor-card {
+  width: 500px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin: 0 auto;
+  
+}
+
+.tutor-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tutor-card .card-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.tutor-card .btn {
+  background-color: #0366d6;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tutor-card .btn:hover{
+  background-color: #0059b3;
+  color: #ffffff;
+
+}

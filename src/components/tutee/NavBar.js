@@ -5,6 +5,11 @@ export default function NavBar() {
         <nav className="navbar">
             <ul className="navbar-links">
                 <li>
+                    <Link to="/tutees">
+                        Home
+                    </Link>
+                </li>
+                <li>
                     <Link to="/all_sessions">
                         All Sessions
                     </Link>
