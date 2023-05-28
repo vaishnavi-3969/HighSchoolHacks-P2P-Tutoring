@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/HighSchoolHacks-P2P-Tutoring/static/css/main.2f23b879.css",
+    "main.js": "/HighSchoolHacks-P2P-Tutoring/static/js/main.8fb24ed3.js",
+    "static/media/logo.svg": "/HighSchoolHacks-P2P-Tutoring/static/media/logo.f11652d92770fcbb15ed3d01965e0294.svg",
+    "static/media/logo.png": "/HighSchoolHacks-P2P-Tutoring/static/media/logo.107d7e14399663aa4caf.png",
+    "static/media/banner.png": "/HighSchoolHacks-P2P-Tutoring/static/media/banner.f50cf01a202c879d8050.png",
+    "index.html": "/HighSchoolHacks-P2P-Tutoring/index.html",
+    "main.2f23b879.css.map": "/HighSchoolHacks-P2P-Tutoring/static/css/main.2f23b879.css.map",
+    "main.8fb24ed3.js.map": "/HighSchoolHacks-P2P-Tutoring/static/js/main.8fb24ed3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f23b879.css",
+    "static/js/main.8fb24ed3.js"
+  ]
+}
