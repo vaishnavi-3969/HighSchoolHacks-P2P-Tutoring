@@ -1,7 +1,11 @@
 import React from 'react'
+import NavBar from './NavBar'
 
 export default function Notifications() {
   return (
-    <div>No New Notifications</div>
+    <div>
+    <NavBar/>
+    <ul><li>Welcome to the P2P Tutoring....</li></ul>
+    </div>
   )
 }

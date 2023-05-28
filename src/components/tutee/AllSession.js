@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import SessionCard from './SessionCard';
 import { getDatabase, ref, onValue } from "firebase/database";
-// import './AllSession.css';
+import './AllSession.css';
 import { initializeApp } from "firebase/app";
+import NavBar from './NavBar';
 
 const firebaseConfig = {
   apiKey: process.env.apiKey,
@@ -37,6 +38,7 @@ const AllSession = () => {
 
   return (
     <div>
+    <NavBar/>
       <h2 className="all-session-heading">All Sessions</h2>
       <div className="session-card-container">
         {sessions.map((session, index) => (
