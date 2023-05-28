@@ -28,7 +28,7 @@ function App() {
             <Route path="/tutors" element={<Tutors />} />
             <Route path="/tutees" element={<Tutees />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/tutors/previous_sessions" element={< PreviousSessions />} />
+            <Route path="/previous_sessions" element={< PreviousSessions />} />
             <Route path="/create_session" element={< CreateSession />} />
             <Route path="/tutor_notifications" element={< TutorNotifications />} />
             <Route path="/tutor_messages" element={< TutorMessages />} />

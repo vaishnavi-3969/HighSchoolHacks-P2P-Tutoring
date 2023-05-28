@@ -1,0 +1,39 @@
+.previous-sessions-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .session-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .session-card {
+    background-color: #f0f0f0;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .session-card-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .session-card p {
+    margin-bottom: 4px;
+  }
+  
+  .session-card-container p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .session-card-container p:last-child {
+    margin-bottom: 0;
+  }
+  
