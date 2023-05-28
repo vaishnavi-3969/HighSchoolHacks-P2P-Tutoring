@@ -50,7 +50,6 @@ const Profile = () => {
     };
 
     const handleSubmit = () => {
-        // Save profile data to Firebase database
         const database = getDatabase(app);
         let profileRef;
         if (userType === "tutor") {
@@ -75,162 +74,170 @@ const Profile = () => {
         };
         push(profileRef, profileData);
         alert('Profile saved successfully!');
-    };
-
-    useEffect(() => {
-        // Check if user is authenticated and retrieve user data
-        // Update isAuthenticated state accordingly
-        if (user) {
-            // Update user data and authentication status
-            setIsAuthenticated(true);
+        if(userType === 'tutor'){
+            window.location.href = '/tutors';
+            alert("Welcome Tutor...")
+        }else if (userType === 'tutee'){
+            window.location.href = '/tutees';
+            alert("Welcome Tutee...")
         }
-    }, [isAuthenticated]);
+       
+};
 
-    const styles = {
+useEffect(() => {
+    // Check if user is authenticated and retrieve user data
+    // Update isAuthenticated state accordingly
+    if (user) {
+        // Update user data and authentication status
+        setIsAuthenticated(true);
+    }
+}, [isAuthenticated]);
+
+const styles = {
     container: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      margin: '50px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        margin: '50px',
     },
     heading: {
-      fontSize: '24px',
-      fontWeight: 'bold',
-      marginBottom: '20px',
+        fontSize: '24px',
+        fontWeight: 'bold',
+        marginBottom: '20px',
     },
     welcome: {
-      fontSize: '20px',
-      marginBottom: '10px',
+        fontSize: '20px',
+        marginBottom: '10px',
     },
     description: {
-      fontSize: '16px',
-      marginBottom: '10px',
+        fontSize: '16px',
+        marginBottom: '10px',
     },
     form: {
-      width: '500px',
+        width: '500px',
     },
     label: {
-      display: 'block',
-      margin: '5px 0',
+        display: 'block',
+        margin: '5px 0',
     },
     radioLabel: {
-      display: 'inline-block',
-      marginRight: '10px',
+        display: 'inline-block',
+        marginRight: '10px',
     },
     input: {
-      width: '100%',
-      height: '30px',
-      borderRadius: '4px',
-      border: '1px solid #ccc',
-      paddingLeft: '5px',
-      fontSize: '14px',
+        width: '100%',
+        height: '30px',
+        borderRadius: '4px',
+        border: '1px solid #ccc',
+        paddingLeft: '5px',
+        fontSize: '14px',
     },
     button: {
-      marginTop: '20px',
-      backgroundColor: '#007bff',
-      color: '#fff',
-      padding: '8px 16px',
-      border: 'none',
-      borderRadius: '4px',
-      cursor: 'pointer',
-      fontSize: '16px',
+        marginTop: '20px',
+        backgroundColor: '#007bff',
+        color: '#fff',
+        padding: '8px 16px',
+        border: 'none',
+        borderRadius: '4px',
+        cursor: 'pointer',
+        fontSize: '16px',
     },
-  };
+};
 
 
-    const firebaseConfig = {
-        apiKey: process.env.apiKey,
-        authDomain: "hacks-df68f.firebaseapp.com",
-        projectId: "hacks-df68f",
-        storageBucket: "hacks-df68f.appspot.com",
-        messagingSenderId: "361173421570",
-        appId: "1:361173421570:web:79e4391a42d4564c8f211b",
-        measurementId: "G-24BW9CM14D"
-    };
+const firebaseConfig = {
+    apiKey: process.env.apiKey,
+    authDomain: "hacks-df68f.firebaseapp.com",
+    projectId: "hacks-df68f",
+    storageBucket: "hacks-df68f.appspot.com",
+    messagingSenderId: "361173421570",
+    appId: "1:361173421570:web:79e4391a42d4564c8f211b",
+    measurementId: "G-24BW9CM14D"
+};
 
-    const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-    return (
-        <div style={styles.container}>
-            {isAuthenticated ? (
-                <>
-                    <h1 style={styles.heading}>Profile</h1>
-                    <p style={styles.welcome}>Welcome, {user.name}!</p>
-                    <p style={styles.description}>Please fill out your profile information:</p>
-                    <label style={styles.label}>
-                        User Type:
-                    </label>
-                    <label style={styles.label}>
-                        <input
-                            type="radio"
-                            name="userType"
-                            value="tutee"
-                            checked={userType === 'tutee'}
-                            onChange={handleUserTypeChange}
-                            style={styles.input}
-                        />
-                        Tutee
-                    </label>
-                    <label style={styles.label}>
-                        <input
-                            type="radio"
-                            name="userType"
-                            value="tutor"
-                            checked={userType === 'tutor'}
-                            onChange={handleUserTypeChange}
-                            style={styles.input}
-                        />
-                        Tutor
-                    </label>
+return (
+    <div style={styles.container}>
+        {isAuthenticated ? (
+            <>
+                <h1 style={styles.heading}>Profile</h1>
+                <p style={styles.welcome}>Welcome, {user.name}!</p>
+                <p style={styles.description}>Please fill out your profile information:</p>
+                <label style={styles.label}>
+                    User Type:
+                </label>
+                <label style={styles.label}>
+                    <input
+                        type="radio"
+                        name="userType"
+                        value="tutee"
+                        checked={userType === 'tutee'}
+                        onChange={handleUserTypeChange}
+                        style={styles.input}
+                    />
+                    Tutee
+                </label>
+                <label style={styles.label}>
+                    <input
+                        type="radio"
+                        name="userType"
+                        value="tutor"
+                        checked={userType === 'tutor'}
+                        onChange={handleUserTypeChange}
+                        style={styles.input}
+                    />
+                    Tutor
+                </label>
 
-                    {userType === 'tutee' && (
-                        <>
-                        </>
-                    )}
-                    {userType === 'tutor' && (
-                        <>
-                            <label style={styles.label}>
-                                Fees(per session):
-                                <input type="text" name="fees" value={fees} onChange={handleChange} style={styles.input} />
-                            </label>
-                            <label style={styles.label}>
-                                Subject Expertise:
-                                <input type="text" name="subjectExpertise" value={subjectExpertise} onChange={handleChange} style={styles.input} />
-                            </label>
-                        </>
-                    )}
-                    <label style={styles.label}>
-                        School:
-                        <input type="text" name="school" value={school} onChange={handleChange} style={styles.input} />
-                    </label>
-                    <label style={styles.label}>
-                        Grade:
-                        <input type="text" name="grade" value={grade} onChange={handleChange} style={styles.input} />
-                    </label>
-                    <label style={styles.label}>
-                        LinkedIn Username:
-                        <input type="text" name="linkedUsername" value={linkedUsername} onChange={handleChange} style={styles.input} />
-                    </label>
-                    <label style={styles.label}>
-                        GitHub Username:
-                        <input type="text" name="githubUsername" value={githubUsername} onChange={handleChange} style={styles.input} />
-                    </label>
-                    <label style={styles.label}>
-                        Location:
-                        <input type="text" name="location" value={location} onChange={handleChange} style={styles.input} />
-                    </label>
-                    <Button variant="" type="submit" style={styles.button} onClick={handleSubmit}>
-                        Save Profile
-                    </Button>
-                </>
-            ) : (
-                <>
-                    <h1 style={styles.heading}>Access Denied</h1>
-                    <p style={styles.description}>Please sign in to view your profile.</p>
-                </>
-            )}
-        </div>
-    );
+                {userType === 'tutee' && (
+                    <>
+                    </>
+                )}
+                {userType === 'tutor' && (
+                    <>
+                        <label style={styles.label}>
+                            Fees(per session):
+                            <input type="text" name="fees" value={fees} onChange={handleChange} style={styles.input} />
+                        </label>
+                        <label style={styles.label}>
+                            Subject Expertise:
+                            <input type="text" name="subjectExpertise" value={subjectExpertise} onChange={handleChange} style={styles.input} />
+                        </label>
+                    </>
+                )}
+                <label style={styles.label}>
+                    School:
+                    <input type="text" name="school" value={school} onChange={handleChange} style={styles.input} />
+                </label>
+                <label style={styles.label}>
+                    Grade:
+                    <input type="text" name="grade" value={grade} onChange={handleChange} style={styles.input} />
+                </label>
+                <label style={styles.label}>
+                    LinkedIn Username:
+                    <input type="text" name="linkedUsername" value={linkedUsername} onChange={handleChange} style={styles.input} />
+                </label>
+                <label style={styles.label}>
+                    GitHub Username:
+                    <input type="text" name="githubUsername" value={githubUsername} onChange={handleChange} style={styles.input} />
+                </label>
+                <label style={styles.label}>
+                    Location:
+                    <input type="text" name="location" value={location} onChange={handleChange} style={styles.input} />
+                </label>
+                <Button variant="" type="submit" style={styles.button} onClick={handleSubmit}>
+                    Save Profile
+                </Button>
+            </>
+        ) : (
+            <>
+                <h1 style={styles.heading}>Access Denied</h1>
+                <p style={styles.description}>Please sign in to view your profile.</p>
+            </>
+        )}
+    </div>
+);
 };
 
 export default Profile;

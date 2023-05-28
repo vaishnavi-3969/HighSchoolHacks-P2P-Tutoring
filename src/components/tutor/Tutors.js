@@ -1,7 +1,11 @@
 import React from 'react'
+import NavBar from './NavBar'
+
 
 export default function Tutors() {
   return (
-    <div>Tutors</div>
+   <>
+    <NavBar/>
+   </>
   )
 }

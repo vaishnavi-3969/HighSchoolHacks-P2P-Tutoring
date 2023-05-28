@@ -1,7 +1,8 @@
 import React from 'react'
-
+import NavBar from './NavBar'
 export default function Tutees() {
-  return (
-    <div>Tutees</div>
+  return (<>
+    <NavBar />
+  </>
   )
 }

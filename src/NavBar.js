@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from './assets/logo.png';
 import './App.css';
-import Font, { Text } from 'react-font';
 import { FaHome, FaUserGraduate, FaUserCircle, FaSignOutAlt } from 'react-icons/fa';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button } from 'react-bootstrap';
