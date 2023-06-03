@@ -15,10 +15,10 @@ import TutorMessages from './components/tutor/Messages';
 import TuteeMessages from './components/tutee/Messages';
 import AllSession from './components/tutee/AllSession';
 import UpcomingSessions from './components/tutee/UpcomingSessions';
+import TutorsPage from './components/TutorsPage';
 
 function App() {
   return (
-
     <BrowserRouter>
       <div className="App">
         <NavBar />
@@ -36,6 +36,7 @@ function App() {
             <Route path="/upcoming_sessions" element={< UpcomingSessions />} />
             <Route path="/tutee_notifications" element={<TuteeNotification />} />
             <Route path="/tutee_messages" element={<TuteeMessages />} />
+            <Route path='/tutors_page' element = {<TutorsPage/>}/>
           </Routes>
         </div>
       </div>

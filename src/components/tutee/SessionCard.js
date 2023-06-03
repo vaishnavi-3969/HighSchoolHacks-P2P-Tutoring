@@ -46,7 +46,7 @@ const SessionCard = ({ session }) => {
         <strong>Hosted By:</strong> {name}
       </p>
       <p>
-        <strong>Email:</strong> {email}
+        <strong>Email:</strong>{email}
       </p>
       <p>
         <strong>Date:</strong> {date}
@@ -70,7 +70,7 @@ const SessionCard = ({ session }) => {
             {resourceLinks.map((link, index) => (
               <li key={index}>
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                  {link}
+                  Ref. Link
                 </a>
               </li>
             ))}

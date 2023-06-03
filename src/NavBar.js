@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from './assets/logo.png';
 import './App.css';
-import { FaHome, FaUserGraduate, FaUserCircle, FaSignOutAlt } from 'react-icons/fa';
+import { FaHome, FaUserGraduate, FaUserCircle, FaSignOutAlt, FaChalkboardTeacher } from 'react-icons/fa';
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button } from 'react-bootstrap';
 
@@ -21,6 +21,12 @@ export default function NavBar() {
                     <Link to="/">
                         <FaHome className="nav-icon" />
                         Home
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/tutors_page">
+                        <FaChalkboardTeacher className="nav-icon" />
+                        Meet Tutors
                     </Link>
                 </li>
                 <li>

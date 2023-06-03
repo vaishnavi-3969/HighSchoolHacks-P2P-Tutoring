@@ -6,6 +6,11 @@ export default function NavBar() {
         <nav className="navbar">
             <ul className="navbar-links">
                 <li>
+                    <Link to="/tutors">
+                        Home
+                    </Link>
+                </li>
+                <li>
                     <Link to="/previous_sessions">
                         Previous Sessions
                     </Link>
