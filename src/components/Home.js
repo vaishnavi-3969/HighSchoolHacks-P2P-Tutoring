@@ -80,7 +80,7 @@ const Home = () => {
                     <span className="wrap">{text}</span></span></h1>
                   <p>Earn School Credits for becoming a tutor</p>
                   <div className="button-group">
-                    <Link to="/" element={<Home />}>
+                    <Link to="/tutor_notifications" element={<Home />}>
                       <motion.button
                         className="join-button"
                         whileHover="hover"
@@ -90,7 +90,7 @@ const Home = () => {
                         Become a Tutor <ArrowRightCircle size={25} />
                       </motion.button>
                     </Link>
-                    <Link to="/" element={<Home />}>
+                    <Link to="/tutee_notifications" element={<Home />}>
                       <motion.button
                         className="join-button"
                         whileHover="hover"
